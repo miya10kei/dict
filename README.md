@@ -2,13 +2,14 @@ dict
 ---
 dict is command line dictionary tool.
 
-## Prerequired
+## Requirement
 - SQLite3
+- GraalVM  // if you will build this yourself
 
 ## Usage
 TBD
 
-## Build
+## How to build
 ```
 ./mvnw package
 ```
