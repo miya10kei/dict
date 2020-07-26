@@ -15,7 +15,7 @@ import static java.util.Comparator.comparing;
 
 @Command(name = "search")
 @RequiredArgsConstructor
-public class SearchCommand extends BaseSubCommand {
+public class SearchSubCommand extends BaseSubCommand {
 
   private final DictionaryRepository repository;
 

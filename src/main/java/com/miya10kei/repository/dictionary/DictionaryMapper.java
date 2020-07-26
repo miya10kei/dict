@@ -14,11 +14,11 @@ public class DictionaryMapper {
     try {
       while (rs.next()) {
         words.add(new Word(
-                new WordId(rs.getLong("id")),
-                rs.getString("name"),
-                rs.getString("ruby"),
-                rs.getString("description"),
-                rs.getString("dictionary")));
+            new WordId(rs.getLong("id")),
+            rs.getString("name"),
+            rs.getString("ruby"),
+            rs.getString("description"),
+            rs.getString("dictionary")));
       }
       return words.toImmutable();
     } catch (SQLException e) {

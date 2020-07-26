@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.miya10kei</groupId>
@@ -17,6 +17,7 @@
     <lombok.version>1.18.12</lombok.version>
     <compiler.version>3.8.1</compiler.version>
     <graalvm.version>20.1.0</graalvm.version>
+    <main.class>com.miya10kei.command.DictCommand</main.class>
   </properties>
 
   <dependencies>
@@ -84,9 +85,16 @@
         </executions>
         <configuration>
           <skip>false</skip>
-          <imageName>dict</imageName>
+          <imageName>${project.artifactId}</imageName>
+          <mainClass>${main.class}</mainClass>
           <buildArgs>
+            --initialize-at-build-time
             --no-fallback
+            --no-server
+            --verbose
+            -H:+RemoveSaturatedTypeFlows
+            -H:+ReportExceptionStackTraces
+            -H:Log=registerResource
           </buildArgs>
         </configuration>
       </plugin>

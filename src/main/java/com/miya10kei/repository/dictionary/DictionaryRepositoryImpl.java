@@ -5,7 +5,7 @@ import com.miya10kei.domain.dictionary.DictionaryName;
 import com.miya10kei.domain.dictionary.DictionaryRepository;
 import com.miya10kei.domain.dictionary.NotFoundDictionary;
 import com.miya10kei.domain.dictionary.Word;
-import com.miya10kei.repository.client.SqliteClient;
+import com.miya10kei.repository.client.DbClient;
 import java.sql.SQLException;
 import lombok.RequiredArgsConstructor;
 import org.eclipse.collections.api.list.ImmutableList;
@@ -13,7 +13,7 @@ import org.eclipse.collections.api.list.ImmutableList;
 @RequiredArgsConstructor
 public class DictionaryRepositoryImpl implements DictionaryRepository {
 
-  private final SqliteClient client;
+  private final DbClient client;
 
   @Override
   public Dictionary fetchDictionary(DictionaryName dictionaryName) {

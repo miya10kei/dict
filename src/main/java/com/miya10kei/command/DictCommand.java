@@ -1,7 +1,7 @@
 package com.miya10kei.command;
 
 import com.miya10kei.command.subcommand.ListSubCommand;
-import com.miya10kei.command.subcommand.SearchCommand;
+import com.miya10kei.command.subcommand.SearchSubCommand;
 import com.miya10kei.command.subcommand.SelectSubCommand;
 import com.miya10kei.repository.client.SqliteClient;
 import com.miya10kei.repository.dictionary.DictionaryRepositoryImpl;
@@ -20,7 +20,7 @@ public class DictCommand {
 
     var status = new CommandLine(new DictCommand())
             .addSubcommand(new ListSubCommand(dictionaryRepository))
-            .addSubcommand(new SearchCommand(dictionaryRepository))
+            .addSubcommand(new SearchSubCommand(dictionaryRepository))
             .addSubcommand(new SelectSubCommand())
             .execute(args);
     System.exit(status);
