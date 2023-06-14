@@ -12,7 +12,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <picocli.version>4.4.0</picocli.version>
     <eclipse-collections.version>10.2.0</eclipse-collections.version>
-    <guava.version>29.0-jre</guava.version>
+    <guava.version>32.0.0-jre</guava.version>
     <sqlite-jdbc.version>3.32.3.1</sqlite-jdbc.version>
     <lombok.version>1.18.12</lombok.version>
     <compiler.version>3.8.1</compiler.version>
